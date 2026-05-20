@@ -13,6 +13,8 @@ Release ZIP: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases
 
 First-user feedback: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1
 
+Deploy landing page: https://vercel.com/new/clone?repository-url=https://github.com/zack-dev-cm/tutorial-to-skill-free-pack&project-name=tutorial-to-skill-free-pack&repository-name=tutorial-to-skill-free-pack
+
 ## Why This Exists
 
 The source video comments showed repeated beginner pain:
