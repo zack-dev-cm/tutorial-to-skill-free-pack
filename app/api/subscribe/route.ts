@@ -17,26 +17,38 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack";
   const kv = redis();
   const now = new Date().toISOString();
+
+  try {
+    await sendUpdateEmail({
+      to: email,
+      subject: "Subscribed to Tutorial-to-Skill updates",
+      html: `
+        <p>You are subscribed to release updates for Tutorial-to-Skill Free Pack.</p>
+        <p>Current release: <a href="https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0">v0.1.0</a></p>
+        <p>Feedback issue: <a href="https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1">first-user testing</a></p>
+        <p><a href="${unsubscribeUrl(siteUrl, email)}">Unsubscribe</a></p>
+      `
+    });
+  } catch {
+    await kv.srem(subscribersSetKey, email);
+    await kv.hset(subscriberKey(email), {
+      email,
+      subscribed: "false",
+      subscribeFailedAt: now,
+      source: "landing-page"
+    });
+    return NextResponse.json({ error: "Could not send confirmation email. Subscription was not saved." }, { status: 502 });
+  }
+
   await kv.sadd(subscribersSetKey, email);
   await kv.hset(subscriberKey(email), {
     email,
     subscribed: "true",
     subscribedAt: now,
     source: "landing-page"
-  });
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack";
-  await sendUpdateEmail({
-    to: email,
-    subject: "Subscribed to Tutorial-to-Skill updates",
-    html: `
-      <p>You are subscribed to release updates for Tutorial-to-Skill Free Pack.</p>
-      <p>Current release: <a href="https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0">v0.1.0</a></p>
-      <p>Feedback issue: <a href="https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1">first-user testing</a></p>
-      <p><a href="${unsubscribeUrl(siteUrl, email)}">Unsubscribe</a></p>
-    `
   });
 
   return NextResponse.json({ message: "Subscribed. Check your inbox for a confirmation email." });

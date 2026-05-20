@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:ship": "python3 scripts/validate_skill_artifact.py && next build",
     "start": "next start",
     "lint": "next lint"
   },

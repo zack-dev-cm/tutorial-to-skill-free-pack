@@ -43,6 +43,10 @@ The repo includes a Vercel-ready Next.js landing page. The email update flow is 
 
 Required production environment variables are listed in `.env.example`.
 Deployment notes are in `docs/vercel-email-deploy.md`.
+Shipping status and usage forecast are in:
+
+- `docs/shipping-readiness-2026-05-20.md`
+- `docs/usage-forecast-2026-05-20.md`
 
 Manual install:
 

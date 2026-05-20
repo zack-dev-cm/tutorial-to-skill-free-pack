@@ -37,31 +37,51 @@ export async function POST(request: NextRequest) {
   if (!title || !summary || !url) {
     return NextResponse.json({ error: "Body must include title, summary, and url." }, { status: 400 });
   }
+  if (title.length > 140 || summary.length > 1200) {
+    return NextResponse.json({ error: "Title or summary is too long." }, { status: 400 });
+  }
+  if (!isHttpUrl(url)) {
+    return NextResponse.json({ error: "URL must be http or https." }, { status: 400 });
+  }
 
   const kv = redis();
   const emails = (await kv.smembers(subscribersSetKey)) as string[];
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack";
 
   let sent = 0;
+  const failed: string[] = [];
   for (const email of emails) {
     const record = await kv.hgetall<Record<string, string>>(subscriberKey(email));
     if (record?.subscribed !== "true") {
       continue;
     }
 
-    await sendUpdateEmail({
-      to: email,
-      subject: title,
-      html: `
-        <p>${escapeHtml(summary)}</p>
-        <p><a href="${escapeAttribute(url)}">Read the update</a></p>
-        <p><a href="${unsubscribeUrl(siteUrl, email)}">Unsubscribe</a></p>
-      `
-    });
-    sent += 1;
+    try {
+      await sendUpdateEmail({
+        to: email,
+        subject: title,
+        html: `
+          <p>${escapeHtml(summary)}</p>
+          <p><a href="${escapeAttribute(url)}">Read the update</a></p>
+          <p><a href="${unsubscribeUrl(siteUrl, email)}">Unsubscribe</a></p>
+        `
+      });
+      sent += 1;
+    } catch {
+      failed.push(email);
+    }
   }
 
-  return NextResponse.json({ sent });
+  return NextResponse.json({ sent, failed: failed.length });
+}
+
+function isHttpUrl(value: string) {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false;
+  }
 }
 
 function escapeHtml(value: string) {
