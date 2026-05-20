@@ -11,6 +11,8 @@ Public repo: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack
 
 Release ZIP: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0
 
+First-user feedback: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1
+
 ## Why This Exists
 
 The source video comments showed repeated beginner pain:
