@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
     "UPSTASH_REDIS_REST_TOKEN",
     "RESEND_API_KEY",
     "EMAIL_FROM",
+    "NEXT_PUBLIC_SITE_URL",
     "UNSUBSCRIBE_SECRET"
   ].filter((name) => !process.env[name]);
   if (missing.length) {
