@@ -7,6 +7,10 @@ This first free pack contains two tested skills:
 - `ai-video-scene-director`: plans low-waste AI video scenes with continuity, shot order, repair prompts, and credit-risk controls.
 - `affiliate-ugc-test-planner`: plans disclosure-safe affiliate UGC tests with hook matrices, video briefs, cost risks, metrics, and kill criteria.
 
+Public repo: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack
+
+Release ZIP: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0
+
 ## Why This Exists
 
 The source video comments showed repeated beginner pain:
@@ -75,4 +79,3 @@ Use affiliate-ugc-test-planner to plan a 7-day organic test for a magnesium slee
 - Deployment validation: `deployments/deployment-validation-2026-05-20.md`
 - Proof cards: `proof-cards/`
 - Pack manifest: `skill-pack-manifest.json`
-
