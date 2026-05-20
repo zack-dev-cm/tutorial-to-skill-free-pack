@@ -3,6 +3,7 @@ import SubscribeForm from "./subscribe-form";
 const repoUrl = "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack";
 const releaseUrl = "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0";
 const feedbackUrl = "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1";
+const deployDocsUrl = "https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/blob/main/docs/vercel-email-deploy.md";
 
 export default function Home() {
   return (
@@ -23,10 +24,10 @@ export default function Home() {
         <div className="container hero-grid">
           <div>
             <div className="eyebrow">OpenClaw / Codex skill proof pack</div>
-            <h1>Two tested skill folders, source notes, and receipts instead of prompt dumps.</h1>
+            <h1>Open skill design with receipts, update email, and no hidden automation.</h1>
             <p className="lead">
-              A free MVP that turns public AI workflow tutorials into reviewable plain-text skills. It is built for
-              testers who want installable artifacts, source boundaries, and runtime evidence before trusting a skill.
+              A free MVP that turns public AI workflow tutorials into reviewable plain-text skills. The landing page,
+              design system, source notes, runtime receipts, and email update logic are all public.
             </p>
             <div className="actions">
               <a className="button primary" href={releaseUrl}>Download v0.1.0</a>
@@ -37,12 +38,21 @@ export default function Home() {
           <aside className="proof-panel" aria-label="Validation facts">
             <p className="proof-title">Validation facts</p>
             <ul className="proof-list">
-              <li><span className="label">Skills</span><span>2 plain `SKILL.md` folders</span></li>
-              <li><span className="label">Runtime</span><span>OpenClaw smoke receipts included</span></li>
-              <li><span className="label">Security</span><span>No secrets, wallets, cookies, or shell commands inside skills</span></li>
-              <li><span className="label">Paid gate</span><span>Blocked until real install/use data exists</span></li>
+              <li><span className="label">Source</span><span>MIT-0 repo, plain files, inspectable scripts</span></li>
+              <li><span className="label">Skills</span><span>Two OpenClaw-compatible `SKILL.md` folders</span></li>
+              <li><span className="label">Runtime</span><span>Smoke-test receipts and required output gates</span></li>
+              <li><span className="label">Updates</span><span>Email only after opt-in; unsubscribe link in every send</span></li>
             </ul>
           </aside>
+        </div>
+      </section>
+
+      <section className="status-strip" aria-label="Release status">
+        <div className="container status-grid">
+          <div><strong>v0.1.0</strong><span>Free release</span></div>
+          <div><strong>0</strong><span>Paid claims</span></div>
+          <div><strong>2</strong><span>Runtime receipts</span></div>
+          <div><strong>100</strong><span>Touch shutdown gate</span></div>
         </div>
       </section>
 
@@ -70,6 +80,24 @@ export default function Home() {
                 <li>Hard boundary: no income promise and no unsupported product claims.</li>
               </ul>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section open-design">
+        <div className="container open-grid">
+          <div>
+            <h2>Open design, not a black-box funnel</h2>
+            <p className="section-intro">
+              The page is designed around public evidence. Every trust claim should resolve to a file, receipt, issue,
+              release, or explicit boundary.
+            </p>
+          </div>
+          <div className="receipt-list">
+            <a href={`${repoUrl}/blob/main/DESIGN.md`}>DESIGN.md tokens and rules</a>
+            <a href={`${repoUrl}/tree/main/proof-cards`}>Proof cards and smoke receipts</a>
+            <a href={deployDocsUrl}>Vercel email deployment notes</a>
+            <a href={feedbackUrl}>First-user feedback issue</a>
           </div>
         </div>
       </section>
@@ -102,6 +130,26 @@ export default function Home() {
             and sends updates through Resend when the release webhook is called.
           </p>
           <SubscribeForm />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2>Next analysis queue</h2>
+          <p className="section-intro">
+            Two new channels were reviewed. The ebook/Claude workflow is the next safer free-skill candidate; the AI
+            influencer workflow is high-signal but needs identity, consent, and disclosure gates before any conversion.
+          </p>
+          <div className="update-grid">
+            <article className="card">
+              <h3>digital-product-preflight-planner</h3>
+              <p>Candidate skill for validating personal knowledge, product promise, pre-sell copy, audience capture, and build/no-build criteria.</p>
+            </article>
+            <article className="card warning">
+              <h3>fictional-character-safety-planner</h3>
+              <p>Only safe if it requires fictional identity disclosure, consent-cleared references, voice rights, platform risk notes, and a release gate.</p>
+            </article>
+          </div>
         </div>
       </section>
 

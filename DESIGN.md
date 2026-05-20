@@ -39,6 +39,8 @@ components:
 
 The page should feel like a release artifact, not a hype funnel. The first viewport must show the product name, exact free deliverable, validation facts, and subscription path.
 
+The open-design promise means the page exposes its own design rules, source files, proof artifacts, and update mechanics. Do not make trust claims that cannot be traced to a repository file, release, issue, or receipt.
+
 ## Layout
 
 Use full-width bands with constrained inner content. Cards are only for repeated proof items, skill summaries, and update entries.
@@ -47,7 +49,13 @@ Use full-width bands with constrained inner content. Cards are only for repeated
 
 Prefer concrete proof: GitHub repo, release ZIP, issue link, validation commands, and exact risk boundaries. Avoid revenue promises, fake testimonials, brand logos, and vague AI productivity language.
 
+Use the release-status strip for measurable facts only:
+
+- current public version;
+- number of paid claims;
+- count of runtime receipts;
+- first-user shutdown gate.
+
 ## Interaction
 
 The email form must disclose that updates are only sent to subscribers. If backend environment variables are missing, the UI should show a configuration error rather than collecting emails.
-
