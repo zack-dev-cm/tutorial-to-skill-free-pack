@@ -1,0 +1,28 @@
+{
+  "skill": "ai-video-scene-director",
+  "profile": "yt-skill-proof",
+  "timestamp": 1779262638,
+  "skill_info": {
+    "filePath": "~/.openclaw-yt-skill-proof/skills/ai-video-scene-director/SKILL.md",
+    "eligible": true,
+    "modelVisible": true,
+    "commandVisible": true,
+    "missing": {
+      "bins": [],
+      "anyBins": [],
+      "env": [],
+      "config": [],
+      "os": []
+    }
+  },
+  "runtime": {
+    "transport": "embedded",
+    "fallbackFrom": "gateway",
+    "provider": "openai",
+    "model": "gpt-5.5",
+    "durationMs": 56633,
+    "textChars": 6913
+  },
+  "passed": true,
+  "failures": []
+}

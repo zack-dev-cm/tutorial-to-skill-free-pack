@@ -1,0 +1,55 @@
+{
+  "name": "tutorial-to-skill-proof-card",
+  "date": "2026-05-20",
+  "decision": "free-mvp-only",
+  "shutdown_threshold": "Park if 100 targeted touches produce fewer than 3 acknowledgements or zero inbound workflow requests by day 30.",
+  "skills": [
+    {
+      "name": "ai-video-scene-director",
+      "source_video_id": "0YhhPQVXA7c",
+      "source_url": "https://www.youtube.com/watch?v=0YhhPQVXA7c",
+      "skill_dir": "skills/ai-video-scene-director",
+      "skill_file": "skills/ai-video-scene-director/SKILL.md",
+      "evidence_reference": "skills/ai-video-scene-director/references/source-evidence.md",
+      "proof_card_md": "proof-cards/ai-video-scene-director-proof-card.md",
+      "proof_card_json": "proof-cards/ai-video-scene-director-proof-card.json",
+      "runtime_receipt": "proof-cards/ai-video-scene-director-runtime-receipt.md",
+      "openclaw_profile": "yt-skill-proof",
+      "required_output_sections": [
+        "concept",
+        "continuity bible",
+        "reference prompts",
+        "shot table",
+        "generation order",
+        "credit risk",
+        "repair prompts",
+        "done criteria"
+      ],
+      "test_prompt": "Use ai-video-scene-director to plan a 20-second cyberpunk product teaser for wireless earbuds. I want 4 shots, a female courier character, rainy alley setting, realistic camera language, and a low credit budget. Start directly with the deliverable."
+    },
+    {
+      "name": "affiliate-ugc-test-planner",
+      "source_video_id": "EYZKlJmFUXw",
+      "source_url": "https://www.youtube.com/watch?v=EYZKlJmFUXw",
+      "skill_dir": "skills/affiliate-ugc-test-planner",
+      "skill_file": "skills/affiliate-ugc-test-planner/SKILL.md",
+      "evidence_reference": "skills/affiliate-ugc-test-planner/references/source-evidence.md",
+      "proof_card_md": "proof-cards/affiliate-ugc-test-planner-proof-card.md",
+      "proof_card_json": "proof-cards/affiliate-ugc-test-planner-proof-card.json",
+      "runtime_receipt": "proof-cards/affiliate-ugc-test-planner-runtime-receipt.md",
+      "openclaw_profile": "yt-skill-proof",
+      "required_output_sections": [
+        "offer fit",
+        "compliance flags",
+        "hook matrix",
+        "video briefs",
+        "carousel brief",
+        "platform plan",
+        "cost risk",
+        "test metrics",
+        "kill criteria"
+      ],
+      "test_prompt": "Use affiliate-ugc-test-planner to plan a 7-day organic test for a magnesium sleep supplement on Pinterest and TikTok. Assume I have not personally used the product yet, have a low AI generation budget, and need disclosure-safe copy. Start directly with the deliverable."
+    }
+  ]
+}

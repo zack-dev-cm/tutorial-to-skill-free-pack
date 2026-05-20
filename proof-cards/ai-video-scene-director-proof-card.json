@@ -1,0 +1,35 @@
+{
+  "artifact": "ai-video-scene-director",
+  "date": "2026-05-20",
+  "decision": "ship-free-proof-only",
+  "source": {
+    "url": "https://www.youtube.com/watch?v=0YhhPQVXA7c",
+    "channel": "JOEY",
+    "handle": "@noisygroup",
+    "title": "The TWO Claude Skills that run our entire AI video pipeline (free download + easy setup)",
+    "snapshot": {
+      "views": 106217,
+      "likes": 8248,
+      "comments": 1200,
+      "sampled_comments": 100
+    }
+  },
+  "outputs": {
+    "skill_dir": "yt-skill-pack-research/skills/ai-video-scene-director",
+    "skill_file": "yt-skill-pack-research/skills/ai-video-scene-director/SKILL.md",
+    "evidence_reference": "yt-skill-pack-research/skills/ai-video-scene-director/references/source-evidence.md"
+  },
+  "gates": {
+    "skill_md_exists": true,
+    "frontmatter_name_description": true,
+    "source_cited": true,
+    "static_validation_passed": true,
+    "openclaw_skill_visible": true,
+    "runtime_validation_passed": true,
+    "runtime_transport": "openclaw-embedded-fallback",
+    "copied_prompt_redistribution": false,
+    "unsafe_workflow_support": false,
+    "paid_ready": false
+  },
+  "test_prompt": "Use ai-video-scene-director to plan a 20-second cyberpunk product teaser for wireless earbuds. I want 4 shots, a female courier character, rainy alley setting, realistic camera language, and a low credit budget."
+}

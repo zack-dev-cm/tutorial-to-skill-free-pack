@@ -1,0 +1,28 @@
+{
+  "skill": "affiliate-ugc-test-planner",
+  "profile": "yt-skill-proof",
+  "timestamp": 1779262741,
+  "skill_info": {
+    "filePath": "~/.openclaw-yt-skill-proof/skills/affiliate-ugc-test-planner/SKILL.md",
+    "eligible": true,
+    "modelVisible": true,
+    "commandVisible": true,
+    "missing": {
+      "bins": [],
+      "anyBins": [],
+      "env": [],
+      "config": [],
+      "os": []
+    }
+  },
+  "runtime": {
+    "transport": "embedded",
+    "fallbackFrom": "gateway",
+    "provider": "openai",
+    "model": "gpt-5.5",
+    "durationMs": 77346,
+    "textChars": 9444
+  },
+  "passed": true,
+  "failures": []
+}

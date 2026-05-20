@@ -1,0 +1,35 @@
+{
+  "artifact": "affiliate-ugc-test-planner",
+  "date": "2026-05-20",
+  "decision": "ship-free-proof-only",
+  "source": {
+    "url": "https://www.youtube.com/watch?v=EYZKlJmFUXw",
+    "channel": "Wealth Wisdom",
+    "handle": "@Officialwealthwisdom",
+    "title": "Claude + Higgsfield Just Changed Affiliate Marketing Forever! (Full Tutorial)",
+    "snapshot": {
+      "views": 45388,
+      "likes": 2552,
+      "comments": 187,
+      "sampled_comments": 100
+    }
+  },
+  "outputs": {
+    "skill_dir": "yt-skill-pack-research/skills/affiliate-ugc-test-planner",
+    "skill_file": "yt-skill-pack-research/skills/affiliate-ugc-test-planner/SKILL.md",
+    "evidence_reference": "yt-skill-pack-research/skills/affiliate-ugc-test-planner/references/source-evidence.md"
+  },
+  "gates": {
+    "skill_md_exists": true,
+    "frontmatter_name_description": true,
+    "source_cited": true,
+    "static_validation_passed": true,
+    "openclaw_skill_visible": true,
+    "runtime_validation_passed": true,
+    "runtime_transport": "openclaw-embedded-fallback",
+    "copied_prompt_redistribution": false,
+    "unsafe_workflow_support": false,
+    "paid_ready": false
+  },
+  "test_prompt": "Use affiliate-ugc-test-planner to plan a 7-day organic test for a magnesium sleep supplement on Pinterest and TikTok. Assume I have not personally used the product yet, have a low AI generation budget, and need disclosure-safe copy."
+}
