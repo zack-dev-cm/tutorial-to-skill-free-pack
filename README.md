@@ -31,6 +31,17 @@ This pack is not a paid course and not a promise of revenue. It is a small proof
 
 Inspect the files first. Each skill is a plain `SKILL.md` plus a reference note.
 
+## Vercel Landing And Email Updates
+
+The repo includes a Vercel-ready Next.js landing page. The email update flow is opt-in only:
+
+- `POST /api/subscribe` validates an email, stores it in Vercel Marketplace Redis / Upstash, and sends a confirmation through Resend.
+- `POST /api/notify` sends an update only to subscribed emails and requires `Authorization: Bearer $UPDATE_WEBHOOK_SECRET`.
+- `GET /api/unsubscribe` removes a signed subscriber from the update list.
+
+Required production environment variables are listed in `.env.example`.
+Deployment notes are in `docs/vercel-email-deploy.md`.
+
 Manual install:
 
 ```bash
