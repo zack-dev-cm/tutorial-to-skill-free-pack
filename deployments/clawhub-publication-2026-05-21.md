@@ -49,4 +49,20 @@ openclaw skills install affiliate-ugc-test-planner
 openclaw skills info
 ```
 
+Exact install path was also validated with an isolated OpenClaw profile:
+
+```bash
+openclaw --profile clawhub-publish-check skills install ai-video-scene-director
+openclaw --profile clawhub-publish-check skills install affiliate-ugc-test-planner
+openclaw --profile clawhub-publish-check skills info ai-video-scene-director --json
+openclaw --profile clawhub-publish-check skills info affiliate-ugc-test-planner --json
+```
+
+Both installed skills reported:
+
+- `eligible: true`
+- `modelVisible: true`
+- `userInvocable: true`
+- `commandVisible: true`
+
 The GitHub release ZIP and manual copy path remain available as fallback distribution.
