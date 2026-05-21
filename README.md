@@ -11,6 +11,11 @@ Public repo: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack
 
 Release ZIP: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/releases/tag/v0.1.0
 
+ClawHub slugs:
+
+- `ai-video-scene-director`
+- `affiliate-ugc-test-planner`
+
 First-user feedback: https://github.com/zack-dev-cm/tutorial-to-skill-free-pack/issues/1
 
 Deploy landing page: https://vercel.com/new/clone?repository-url=https://github.com/zack-dev-cm/tutorial-to-skill-free-pack&project-name=tutorial-to-skill-free-pack&repository-name=tutorial-to-skill-free-pack
@@ -32,6 +37,14 @@ This pack is not a paid course and not a promise of revenue. It is a small proof
 ## Install
 
 Inspect the files first. Each skill is a plain `SKILL.md` plus a reference note.
+
+ClawHub install:
+
+```bash
+openclaw skills install ai-video-scene-director
+openclaw skills install affiliate-ugc-test-planner
+openclaw skills info
+```
 
 ## Vercel Landing And Email Updates
 

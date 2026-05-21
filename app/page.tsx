@@ -30,7 +30,8 @@ export default function Home() {
               design system, source notes, runtime receipts, and email update logic are all public.
             </p>
             <div className="actions">
-              <a className="button primary" href={releaseUrl}>Download v0.1.0</a>
+              <a className="button primary" href="#install">Install from ClawHub</a>
+              <a className="button secondary" href={releaseUrl}>Download v0.1.0</a>
               <a className="button secondary" href={feedbackUrl}>Report install result</a>
             </div>
           </div>
@@ -39,7 +40,7 @@ export default function Home() {
             <p className="proof-title">Validation facts</p>
             <ul className="proof-list">
               <li><span className="label">Source</span><span>MIT-0 repo, plain files, inspectable scripts</span></li>
-              <li><span className="label">Skills</span><span>Two OpenClaw-compatible `SKILL.md` folders</span></li>
+              <li><span className="label">Registry</span><span>Two skills published on ClawHub as v0.1.0</span></li>
               <li><span className="label">Runtime</span><span>Smoke-test receipts and required output gates</span></li>
               <li><span className="label">Updates</span><span>Email only after opt-in; unsubscribe link in every send</span></li>
             </ul>
@@ -50,7 +51,7 @@ export default function Home() {
       <section className="status-strip" aria-label="Release status">
         <div className="container status-grid">
           <div><strong>v0.1.0</strong><span>Free release</span></div>
-          <div><strong>0</strong><span>Paid claims</span></div>
+          <div><strong>2</strong><span>ClawHub skills</span></div>
           <div><strong>2</strong><span>Runtime receipts</span></div>
           <div><strong>100</strong><span>Touch shutdown gate</span></div>
         </div>
@@ -156,7 +157,13 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <h2>Install path</h2>
-          <p className="section-intro">Clone the repo or download the release ZIP, inspect the files, then install into OpenClaw managed skills.</p>
+          <p className="section-intro">
+            Install through ClawHub first. If the registry is unavailable, clone the repo or download the release ZIP,
+            inspect the files, then use the manual fallback.
+          </p>
+          <pre className="code" id="install"><code>{`openclaw skills install ai-video-scene-director
+openclaw skills install affiliate-ugc-test-planner
+openclaw skills info`}</code></pre>
           <pre className="code"><code>{`mkdir -p ~/.openclaw/skills
 cp -R skills/ai-video-scene-director ~/.openclaw/skills/
 cp -R skills/affiliate-ugc-test-planner ~/.openclaw/skills/
